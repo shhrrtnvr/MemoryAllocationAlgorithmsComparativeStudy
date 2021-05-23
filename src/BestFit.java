@@ -34,11 +34,11 @@ public class BestFit implements FitModel{
             }
         }
     }
-
+    @Override
     public int[] getAllocation() {
         return allocation;
     }
-
+    @Override
     public int getAvailableMemory(){
         return availableMemory;
     }
