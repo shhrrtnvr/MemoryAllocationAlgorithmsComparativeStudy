@@ -47,7 +47,7 @@ public class Comparison {
     }
 
     public static void main(String[] args) {
-        int n = 100, no_blocks =1000, no_process = 2000;
+        int no_of_simulation = 100, no_blocks =1000, no_process = 2000;
         int maxBlockSize = 1000;
         int maxProcessSize = 500;
 
@@ -56,7 +56,7 @@ public class Comparison {
         IntSummaryStatistics worstFitFragments = new IntSummaryStatistics();
 
         Random random = new Random();
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < no_of_simulation; i++) {
             int[] blockSize = new int[no_blocks];
             int[] processSize = new int[no_process];
             for (int j = 0; j < no_blocks; j++) {
