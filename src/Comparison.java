@@ -41,15 +41,14 @@ public class Comparison {
         System.out.println("Total \t\t\t" + firstFit.getSum() + "\t  " + bestFit.getSum() + "\t\t\t" + worstFit.getSum());
         System.out.println("Worst Case \t\t" + firstFit.getMax() + "\t\t  " + bestFit.getMax() + "\t\t\t" + worstFit.getMax());
         System.out.println("Best Case \t\t" + firstFit.getMin() + "\t\t  " + bestFit.getMin() + "\t\t\t   " + worstFit.getMin());
-        System.out.println("Average\t\t\t" + firstFit.getAverage() + "\t  " + bestFit.getAverage() + "\t\t\t" + worstFit.getAverage());
-        System.out.println("Percentage \t\t" + firstFit.getAverage()*100.0/n + "%\t " +
-                bestFit.getAverage()*100.0/n + "%\t\t" + worstFit.getAverage()*100.0/n + "%");
+        System.out.println("Average\t\t\t" + firstFit.getAverage() + "\t  " + bestFit.getAverage() + "\t\t" + worstFit.getAverage());
+        System.out.printf("Percentage \t\t%.4f%%\t%.4f%%\t\t%.4f%%%n", firstFit.getAverage()*100.0/n, bestFit.getAverage()*100.0/n, worstFit.getAverage()*100.0/n);
     }
 
     public static void main(String[] args) {
-        int no_of_simulation = 100, no_blocks =1000, no_process = 2000;
-        int maxBlockSize = 1000;
-        int maxProcessSize = 500;
+        int no_of_simulation = 1000;
+        int no_blocks =1000, no_process = 1000;
+        int maxBlockSize = 1000, maxProcessSize = 1000;
 
         IntSummaryStatistics firstFitFragments = new IntSummaryStatistics();
         IntSummaryStatistics bestFitFragments = new IntSummaryStatistics();
